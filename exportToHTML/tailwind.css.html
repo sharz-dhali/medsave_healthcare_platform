@@ -1,0 +1,229 @@
+<html>
+<head>
+<title>tailwind.css</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #6aab73;}
+.s2 { color: #7a7e85;}
+.s3 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+tailwind.css</font>
+</center></td></tr></table>
+<pre><span class="s0">@import url(</span><span class="s1">'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap'</span><span class="s0">);</span>
+<span class="s0">@tailwind base;</span>
+<span class="s0">@tailwind components;</span>
+<span class="s0">@tailwind utilities;</span>
+
+<span class="s0">:root {</span>
+  <span class="s2">/* Primary Colors */</span>
+  <span class="s0">--color-primary: #</span><span class="s3">2</span><span class="s0">E86AB; </span><span class="s2">/* trustworthy-blue */</span>
+  <span class="s0">--color-primary-50: #EBF4F8; </span><span class="s2">/* trustworthy-blue-50 */</span>
+  <span class="s0">--color-primary-100: #D7E9F1; </span><span class="s2">/* trustworthy-blue-100 */</span>
+  <span class="s0">--color-primary-200: #AFD3E3; </span><span class="s2">/* trustworthy-blue-200 */</span>
+  <span class="s0">--color-primary-300: #</span><span class="s3">87</span><span class="s0">BDD5; </span><span class="s2">/* trustworthy-blue-300 */</span>
+  <span class="s0">--color-primary-400: #</span><span class="s3">5</span><span class="s0">FA7C7; </span><span class="s2">/* trustworthy-blue-400 */</span>
+  <span class="s0">--color-primary-500: #</span><span class="s3">2</span><span class="s0">E86AB; </span><span class="s2">/* trustworthy-blue-500 */</span>
+  <span class="s0">--color-primary-600: #</span><span class="s3">256</span><span class="s0">B89; </span><span class="s2">/* trustworthy-blue-600 */</span>
+  <span class="s0">--color-primary-700: #</span><span class="s3">1</span><span class="s0">C5067; </span><span class="s2">/* trustworthy-blue-700 */</span>
+  <span class="s0">--color-primary-800: #</span><span class="s3">133545</span><span class="s0">; </span><span class="s2">/* trustworthy-blue-800 */</span>
+  <span class="s0">--color-primary-900: #</span><span class="s3">0</span><span class="s0">A1A23; </span><span class="s2">/* trustworthy-blue-900 */</span>
+
+  <span class="s2">/* Secondary Colors */</span>
+  <span class="s0">--color-secondary: #</span><span class="s3">1</span><span class="s0">B5E7A; </span><span class="s2">/* deep-trust */</span>
+  <span class="s0">--color-secondary-50: #E8F1F5; </span><span class="s2">/* deep-trust-50 */</span>
+  <span class="s0">--color-secondary-100: #D1E3EB; </span><span class="s2">/* deep-trust-100 */</span>
+  <span class="s0">--color-secondary-200: #A3C7D7; </span><span class="s2">/* deep-trust-200 */</span>
+  <span class="s0">--color-secondary-300: #</span><span class="s3">75</span><span class="s0">ABC3; </span><span class="s2">/* deep-trust-300 */</span>
+  <span class="s0">--color-secondary-400: #</span><span class="s3">478</span><span class="s0">FAF; </span><span class="s2">/* deep-trust-400 */</span>
+  <span class="s0">--color-secondary-500: #</span><span class="s3">1</span><span class="s0">B5E7A; </span><span class="s2">/* deep-trust-500 */</span>
+  <span class="s0">--color-secondary-600: #</span><span class="s3">164</span><span class="s0">B62; </span><span class="s2">/* deep-trust-600 */</span>
+  <span class="s0">--color-secondary-700: #</span><span class="s3">103849</span><span class="s0">; </span><span class="s2">/* deep-trust-700 */</span>
+  <span class="s0">--color-secondary-800: #</span><span class="s3">0</span><span class="s0">B2531; </span><span class="s2">/* deep-trust-800 */</span>
+  <span class="s0">--color-secondary-900: #</span><span class="s3">051218</span><span class="s0">; </span><span class="s2">/* deep-trust-900 */</span>
+
+  <span class="s2">/* Accent Colors */</span>
+  <span class="s0">--color-accent: #F18F01; </span><span class="s2">/* optimistic-orange */</span>
+  <span class="s0">--color-accent-50: #FEF7E6; </span><span class="s2">/* optimistic-orange-50 */</span>
+  <span class="s0">--color-accent-100: #FDEFCD; </span><span class="s2">/* optimistic-orange-100 */</span>
+  <span class="s0">--color-accent-200: #FBDF9B; </span><span class="s2">/* optimistic-orange-200 */</span>
+  <span class="s0">--color-accent-300: #F9CF69; </span><span class="s2">/* optimistic-orange-300 */</span>
+  <span class="s0">--color-accent-400: #F7BF37; </span><span class="s2">/* optimistic-orange-400 */</span>
+  <span class="s0">--color-accent-500: #F18F01; </span><span class="s2">/* optimistic-orange-500 */</span>
+  <span class="s0">--color-accent-600: #C17301; </span><span class="s2">/* optimistic-orange-600 */</span>
+  <span class="s0">--color-accent-700: #</span><span class="s3">915701</span><span class="s0">; </span><span class="s2">/* optimistic-orange-700 */</span>
+  <span class="s0">--color-accent-800: #</span><span class="s3">613</span><span class="s0">B00; </span><span class="s2">/* optimistic-orange-800 */</span>
+  <span class="s0">--color-accent-900: #</span><span class="s3">301</span><span class="s0">E00; </span><span class="s2">/* optimistic-orange-900 */</span>
+
+  <span class="s2">/* Background Colors */</span>
+  <span class="s0">--color-background: #FAFBFC; </span><span class="s2">/* clean-canvas */</span>
+  <span class="s0">--color-surface: #FFFFFF; </span><span class="s2">/* pure-white */</span>
+
+  <span class="s2">/* Text Colors */</span>
+  <span class="s0">--color-text-primary: #</span><span class="s3">1</span><span class="s0">A202C; </span><span class="s2">/* high-contrast */</span>
+  <span class="s0">--color-text-secondary: #</span><span class="s3">4</span><span class="s0">A5568; </span><span class="s2">/* supporting-gray */</span>
+
+  <span class="s2">/* Status Colors */</span>
+  <span class="s0">--color-success: #</span><span class="s3">38</span><span class="s0">A169; </span><span class="s2">/* health-green */</span>
+  <span class="s0">--color-success-50: #F0FFF4; </span><span class="s2">/* health-green-50 */</span>
+  <span class="s0">--color-success-100: #C6F6D5; </span><span class="s2">/* health-green-100 */</span>
+  <span class="s0">--color-success-200: #</span><span class="s3">9</span><span class="s0">AE6B4; </span><span class="s2">/* health-green-200 */</span>
+  <span class="s0">--color-success-300: #</span><span class="s3">68</span><span class="s0">D391; </span><span class="s2">/* health-green-300 */</span>
+  <span class="s0">--color-success-400: #</span><span class="s3">48</span><span class="s0">BB78; </span><span class="s2">/* health-green-400 */</span>
+  <span class="s0">--color-success-500: #</span><span class="s3">38</span><span class="s0">A169; </span><span class="s2">/* health-green-500 */</span>
+  <span class="s0">--color-success-600: #</span><span class="s3">2</span><span class="s0">F855A; </span><span class="s2">/* health-green-600 */</span>
+  <span class="s0">--color-success-700: #</span><span class="s3">276749</span><span class="s0">; </span><span class="s2">/* health-green-700 */</span>
+  <span class="s0">--color-success-800: #</span><span class="s3">22543</span><span class="s0">D; </span><span class="s2">/* health-green-800 */</span>
+  <span class="s0">--color-success-900: #</span><span class="s3">1</span><span class="s0">C4532; </span><span class="s2">/* health-green-900 */</span>
+
+  <span class="s0">--color-warning: #D69E2E; </span><span class="s2">/* gentle-attention */</span>
+  <span class="s0">--color-warning-50: #FFFBEB; </span><span class="s2">/* gentle-attention-50 */</span>
+  <span class="s0">--color-warning-100: #FEF5E7; </span><span class="s2">/* gentle-attention-100 */</span>
+  <span class="s0">--color-warning-200: #FEEBC8; </span><span class="s2">/* gentle-attention-200 */</span>
+  <span class="s0">--color-warning-300: #FBD38D; </span><span class="s2">/* gentle-attention-300 */</span>
+  <span class="s0">--color-warning-400: #F6AD55; </span><span class="s2">/* gentle-attention-400 */</span>
+  <span class="s0">--color-warning-500: #D69E2E; </span><span class="s2">/* gentle-attention-500 */</span>
+  <span class="s0">--color-warning-600: #B7791F; </span><span class="s2">/* gentle-attention-600 */</span>
+  <span class="s0">--color-warning-700: #</span><span class="s3">975</span><span class="s0">A16; </span><span class="s2">/* gentle-attention-700 */</span>
+  <span class="s0">--color-warning-800: #</span><span class="s3">744210</span><span class="s0">; </span><span class="s2">/* gentle-attention-800 */</span>
+  <span class="s0">--color-warning-900: #</span><span class="s3">5</span><span class="s0">F370E; </span><span class="s2">/* gentle-attention-900 */</span>
+
+  <span class="s0">--color-error: #E53E3E; </span><span class="s2">/* clear-concern */</span>
+  <span class="s0">--color-error-50: #FED7D7; </span><span class="s2">/* clear-concern-50 */</span>
+  <span class="s0">--color-error-100: #FEB2B2; </span><span class="s2">/* clear-concern-100 */</span>
+  <span class="s0">--color-error-200: #FC8181; </span><span class="s2">/* clear-concern-200 */</span>
+  <span class="s0">--color-error-300: #F56565; </span><span class="s2">/* clear-concern-300 */</span>
+  <span class="s0">--color-error-400: #E53E3E; </span><span class="s2">/* clear-concern-400 */</span>
+  <span class="s0">--color-error-500: #C53030; </span><span class="s2">/* clear-concern-500 */</span>
+  <span class="s0">--color-error-600: #</span><span class="s3">9</span><span class="s0">B2C2C; </span><span class="s2">/* clear-concern-600 */</span>
+  <span class="s0">--color-error-700: #</span><span class="s3">742</span><span class="s0">A2A; </span><span class="s2">/* clear-concern-700 */</span>
+  <span class="s0">--color-error-800: #</span><span class="s3">63171</span><span class="s0">B; </span><span class="s2">/* clear-concern-800 */</span>
+  <span class="s0">--color-error-900: #</span><span class="s3">521</span><span class="s0">B1B; </span><span class="s2">/* clear-concern-900 */</span>
+
+  <span class="s2">/* Border Colors */</span>
+  <span class="s0">--color-border: #E2E8F0; </span><span class="s2">/* neutral-border */</span>
+  <span class="s0">--color-border-focus: #</span><span class="s3">2</span><span class="s0">E86AB; </span><span class="s2">/* trustworthy-blue */</span>
+<span class="s0">}</span>
+
+<span class="s0">@layer base {</span>
+  <span class="s0">html {</span>
+    <span class="s0">font-family: </span><span class="s1">'Inter'</span><span class="s0">, sans-serif;</span>
+  <span class="s0">}</span>
+  
+  <span class="s0">body {</span>
+    <span class="s0">background-color: var(--color-background);</span>
+    <span class="s0">color: var(--color-text-primary);</span>
+    <span class="s0">line-height: </span><span class="s3">1.6</span><span class="s0">;</span>
+  <span class="s0">}</span>
+
+  <span class="s2">/* Reduced motion support */</span>
+  <span class="s0">@media (prefers-reduced-motion: reduce) {</span>
+    <span class="s0">*,</span>
+    <span class="s0">*::before,</span>
+    <span class="s0">*::after {</span>
+      <span class="s0">animation-duration: </span><span class="s3">0</span><span class="s0">.</span><span class="s3">01</span><span class="s0">ms !important;</span>
+      <span class="s0">animation-iteration-count: </span><span class="s3">1 </span><span class="s0">!important;</span>
+      <span class="s0">transition-duration: </span><span class="s3">0</span><span class="s0">.</span><span class="s3">01</span><span class="s0">ms !important;</span>
+    <span class="s0">}</span>
+  <span class="s0">}</span>
+<span class="s0">}</span>
+
+<span class="s0">@layer components {</span>
+  <span class="s2">/* Button Components */</span>
+  <span class="s0">.btn-primary {</span>
+    <span class="s0">@apply bg-accent hover:bg-accent-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 ease-out shadow-lg hover:shadow-xl;</span>
+  <span class="s0">}</span>
+
+  <span class="s0">.btn-secondary {</span>
+    <span class="s0">@apply bg-primary hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 ease-out shadow-md hover:shadow-lg;</span>
+  <span class="s0">}</span>
+
+  <span class="s0">.btn-outline {</span>
+    <span class="s0">@apply border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 ease-out;</span>
+  <span class="s0">}</span>
+
+  <span class="s2">/* Card Components */</span>
+  <span class="s0">.card {</span>
+    <span class="s0">@apply bg-surface rounded-lg shadow-md p-6 transition-all duration-300 ease-out;</span>
+  <span class="s0">}</span>
+
+  <span class="s0">.card-hover {</span>
+    <span class="s0">@apply hover:shadow-lg hover:-translate-y-1;</span>
+  <span class="s0">}</span>
+
+  <span class="s2">/* Form Components */</span>
+  <span class="s0">.form-input {</span>
+    <span class="s0">@apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary-100 transition-all duration-300 ease-out;</span>
+  <span class="s0">}</span>
+
+  <span class="s0">.form-label {</span>
+    <span class="s0">@apply block text-sm font-medium text-text-primary mb-2;</span>
+  <span class="s0">}</span>
+
+  <span class="s2">/* Typography Components */</span>
+  <span class="s0">.heading-xl {</span>
+    <span class="s0">@apply text-4xl md:text-5xl font-bold text-text-primary leading-tight;</span>
+  <span class="s0">}</span>
+
+  <span class="s0">.heading-lg {</span>
+    <span class="s0">@apply text-3xl md:text-4xl font-bold text-text-primary leading-tight;</span>
+  <span class="s0">}</span>
+
+  <span class="s0">.heading-md {</span>
+    <span class="s0">@apply text-2xl md:text-3xl font-semibold text-text-primary leading-tight;</span>
+  <span class="s0">}</span>
+
+  <span class="s0">.heading-sm {</span>
+    <span class="s0">@apply text-xl md:text-2xl font-semibold text-text-primary leading-tight;</span>
+  <span class="s0">}</span>
+
+  <span class="s0">.body-lg {</span>
+    <span class="s0">@apply text-lg text-text-primary leading-relaxed;</span>
+  <span class="s0">}</span>
+
+  <span class="s0">.body-md {</span>
+    <span class="s0">@apply text-base text-text-primary leading-relaxed;</span>
+  <span class="s0">}</span>
+
+  <span class="s0">.body-sm {</span>
+    <span class="s0">@apply text-sm text-text-secondary leading-relaxed;</span>
+  <span class="s0">}</span>
+
+  <span class="s2">/* Status Components */</span>
+  <span class="s0">.alert-success {</span>
+    <span class="s0">@apply bg-success-50 border border-success-200 text-success-800 p-4 rounded-lg;</span>
+  <span class="s0">}</span>
+
+  <span class="s0">.alert-warning {</span>
+    <span class="s0">@apply bg-warning-50 border border-warning-200 text-warning-800 p-4 rounded-lg;</span>
+  <span class="s0">}</span>
+
+  <span class="s0">.alert-error {</span>
+    <span class="s0">@apply bg-error-50 border border-error-200 text-error-800 p-4 rounded-lg;</span>
+  <span class="s0">}</span>
+<span class="s0">}</span>
+
+<span class="s0">@layer utilities {</span>
+  <span class="s0">.text-gradient {</span>
+    <span class="s0">background: linear-gradient(</span><span class="s3">135</span><span class="s0">deg, var(--color-primary), var(--color-accent));</span>
+    <span class="s0">-webkit-background-clip: text;</span>
+    <span class="s0">-webkit-text-fill-color: transparent;</span>
+    <span class="s0">background-clip: text;</span>
+  <span class="s0">}</span>
+
+  <span class="s0">.shadow-soft {</span>
+    <span class="s0">box-shadow: </span><span class="s3">0 4</span><span class="s0">px </span><span class="s3">6</span><span class="s0">px -</span><span class="s3">1</span><span class="s0">px rgba(</span><span class="s3">0</span><span class="s0">, </span><span class="s3">0</span><span class="s0">, </span><span class="s3">0</span><span class="s0">, </span><span class="s3">0.1</span><span class="s0">), </span><span class="s3">0 2</span><span class="s0">px </span><span class="s3">4</span><span class="s0">px -</span><span class="s3">1</span><span class="s0">px rgba(</span><span class="s3">0</span><span class="s0">, </span><span class="s3">0</span><span class="s0">, </span><span class="s3">0</span><span class="s0">, </span><span class="s3">0.06</span><span class="s0">);</span>
+  <span class="s0">}</span>
+
+  <span class="s0">.shadow-strong {</span>
+    <span class="s0">box-shadow: </span><span class="s3">0 10</span><span class="s0">px </span><span class="s3">15</span><span class="s0">px -</span><span class="s3">3</span><span class="s0">px rgba(</span><span class="s3">0</span><span class="s0">, </span><span class="s3">0</span><span class="s0">, </span><span class="s3">0</span><span class="s0">, </span><span class="s3">0.1</span><span class="s0">), </span><span class="s3">0 4</span><span class="s0">px </span><span class="s3">6</span><span class="s0">px -</span><span class="s3">2</span><span class="s0">px rgba(</span><span class="s3">0</span><span class="s0">, </span><span class="s3">0</span><span class="s0">, </span><span class="s3">0</span><span class="s0">, </span><span class="s3">0.05</span><span class="s0">);</span>
+  <span class="s0">}</span>
+<span class="s0">}</span></pre>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

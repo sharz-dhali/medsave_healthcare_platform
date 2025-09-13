@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthcare Network Directory - Find Quality Providers | MedSave</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Discover quality healthcare providers in Uganda's largest medical network. Find clinics, hospitals, and specialists near you with MedSave verified payment processing." />
+<script type="module" src="../public/custom.js"></script>
+</head>
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-surface shadow-soft">
+        <nav class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                   <img src="https://i.pinimg.com/736x/79/54/af/7954af8fb2b20e502bca99f093686917.jpg" alt="MedSave Logo" class="object-cover w-10 h-10 mr-4 rounded-full" loading="lazy" />
+                    <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <circle cx="20" cy="8" r="2" fill="currentColor"></circle>
+                        <path d="M12 28h16v2H12z" fill="currentColor"></path>
+                    </svg>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="items-center hidden space-x-8 md:flex">
+                    <a href="homepage_healthcare_fintech_platform.html" class="transition-colors text-text-secondary hover:text-primary">Home</a>
+                    <a href="how_it_works_educational_journey.html" class="transition-colors text-text-secondary hover:text-primary">How It Works</a>
+                    <a href="healthcare_network_directory_provider_discovery.html" class="font-semibold text-primary">Find Providers</a>
+                    <a href="success_stories_community_impact_showcase.html" class="transition-colors text-text-secondary hover:text-primary">Success Stories</a>
+                    <a href="personal_dashboard_account_management_hub.html" class="transition-colors text-text-secondary hover:text-primary">Dashboard</a>
+                    <a href="account_creation_flow_streamlined_onboarding.html" class="btn-primary">Get Started</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-text-primary hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 border-t sm:px-3 bg-surface border-border">
+                    <a href="homepage_healthcare_fintech_platform.html" class="block px-3 py-2 text-text-secondary hover:text-primary">Home</a>
+                    <a href="how_it_works_educational_journey.html" class="block px-3 py-2 text-text-secondary hover:text-primary">How It Works</a>
+                    <a href="healthcare_network_directory_provider_discovery.html" class="block px-3 py-2 font-semibold text-primary">Find Providers</a>
+                    <a href="success_stories_community_impact_showcase.html" class="block px-3 py-2 text-text-secondary hover:text-primary">Success Stories</a>
+                    <a href="personal_dashboard_account_management_hub.html" class="block px-3 py-2 text-text-secondary hover:text-primary">Dashboard</a>
+                    <a href="account_creation_flow_streamlined_onboarding.html" class="block px-3 py-2 text-center btn-primary">Get Started</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+<main>
+    <!-- Hero Search Section -->
+    <section class="py-16 bg-gradient-to-br from-primary-50 to-accent-50">
+        <div class="max-w-4xl px-4 mx-auto sm:px-6 lg:px-8">
+            <div class="mb-8 text-center">
+                <h1 class="mb-4 heading-xl">Find Quality Healthcare Near You</h1>
+                <p class="body-lg text-text-secondary">
+                    Discover 200+ verified providers across Uganda with guaranteed MedSave payment processing
+                </p>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="p-6 mb-8 bg-surface rounded-2xl shadow-strong">
+                <div class="flex flex-col gap-4 md:flex-row">
+                    <div class="flex-1">
+                        <div class="relative">
+                            <svg class="absolute w-5 h-5 left-3 top-3 text-text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                            <input type="text" id="search-input" placeholder="Search by service, specialty, or provider name..." class="pl-10 text-lg form-input h-14" />
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <div class="relative">
+                            <svg class="absolute w-5 h-5 left-3 top-3 text-text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <input type="text" id="location-input" placeholder="Enter location (e.g., Kampala, Jinja)" class="pl-10 text-lg form-input h-14" />
+                        </div>
+                    </div>
+                    <button onclick="searchProviders()" class="px-8 btn-primary h-14 whitespace-nowrap">
+                        Search Providers
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quick Search Tags -->
+            <div class="flex flex-wrap justify-center gap-3">
+                <button onclick="quickSearch('emergency')" class="px-4 py-2 text-sm font-medium transition-colors rounded-full bg-error-100 text-error-700 hover:bg-error-200">
+                    🚨 Emergency Care
+                </button>
+                <button onclick="quickSearch('pediatric')" class="px-4 py-2 text-sm font-medium transition-colors rounded-full bg-primary-100 text-primary-700 hover:bg-primary-200">
+                    👶 Pediatric Care
+                </button>
+                <button onclick="quickSearch('dental')" class="px-4 py-2 text-sm font-medium transition-colors rounded-full bg-accent-100 text-accent-700 hover:bg-accent-200">
+                    🦷 Dental Services
+                </button>
+                <button onclick="quickSearch('maternity')" class="px-4 py-2 text-sm font-medium transition-colors rounded-full bg-success-100 text-success-700 hover:bg-success-200">
+                    🤱 Maternity Care
+                </button>
+                <button onclick="quickSearch('pharmacy')" class="px-4 py-2 text-sm font-medium transition-colors rounded-full bg-secondary-100 text-secondary-700 hover:bg-secondary-200">
+                    💊 Pharmacy
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters and Results Section -->
+    <section class="py-12">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="grid gap-8 lg:grid-cols-4">
+                <!-- Filters Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="sticky p-6 bg-surface rounded-xl shadow-soft top-24">
+                        <div class="flex items-center justify-between mb-6">
+                            <h2 class="heading-sm">Filters</h2>
+                            <button onclick="clearFilters()" class="text-sm font-medium text-accent hover:text-accent-600">
+                                Clear All
+                            </button>
+                        </div>
+
+                        <!-- Specialty Filter -->
+                        <div class="mb-6">
+                            <h3 class="mb-3 font-semibold text-text-primary">Specialty</h3>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="border-gray-300 rounded text-primary focus:ring-primary" value="general" />
+                                    <span class="ml-2 text-sm">General Medicine</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="border-gray-300 rounded text-primary focus:ring-primary" value="pediatric" />
+                                    <span class="ml-2 text-sm">Pediatrics</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="border-gray-300 rounded text-primary focus:ring-primary" value="dental" />
+                                    <span class="ml-2 text-sm">Dental Care</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="border-gray-300 rounded text-primary focus:ring-primary" value="maternity" />
+                                    <span class="ml-2 text-sm">Maternity</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="border-gray-300 rounded text-primary focus:ring-primary" value="emergency" />
+                                    <span class="ml-2 text-sm">Emergency Care</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Distance Filter -->
+                        <div class="mb-6">
+                            <h3 class="mb-3 font-semibold text-text-primary">Distance</h3>
+                            <select class="form-input">
+                                <option value="">Any distance</option>
+                                <option value="5">Within 5 km</option>
+                                <option value="10">Within 10 km</option>
+                                <option value="25">Within 25 km</option>
+                                <option value="50">Within 50 km</option>
+                            </select>
+                        </div>
+
+                        <!-- Rating Filter -->
+                        <div class="mb-6">
+                            <h3 class="mb-3 font-semibold text-text-primary">Minimum Rating</h3>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="radio" name="rating" class="text-primary focus:ring-primary" value="4" />
+                                    <span class="flex items-center ml-2 text-sm">
+                                        <div class="flex mr-1 text-accent">
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        </div>
+                                        4+ stars
+                                    </span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="rating" class="text-primary focus:ring-primary" value="3" />
+                                    <span class="flex items-center ml-2 text-sm">
+                                        <div class="flex mr-1 text-accent">
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        </div>
+                                        3+ stars
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- MedSave Features -->
+                        <div class="mb-6">
+                            <h3 class="mb-3 font-semibold text-text-primary">MedSave Features</h3>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="border-gray-300 rounded text-primary focus:ring-primary" value="verified" />
+                                    <span class="ml-2 text-sm">MedSave Verified</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="border-gray-300 rounded text-primary focus:ring-primary" value="instant" />
+                                    <span class="ml-2 text-sm">Instant Payment</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="border-gray-300 rounded text-primary focus:ring-primary" value="booking" />
+                                    <span class="ml-2 text-sm">Online Booking</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Languages -->
+                        <div>
+                            <h3 class="mb-3 font-semibold text-text-primary">Languages</h3>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="border-gray-300 rounded text-primary focus:ring-primary" value="english" />
+                                    <span class="ml-2 text-sm">English</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="border-gray-300 rounded text-primary focus:ring-primary" value="luganda" />
+                                    <span class="ml-2 text-sm">Luganda</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="border-gray-300 rounded text-primary focus:ring-primary" value="swahili" />
+                                    <span class="ml-2 text-sm">Swahili</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div class="lg:col-span-3">
+                    <!-- Results Header -->
+                    <div class="flex flex-col items-start justify-between mb-6 sm:flex-row sm:items-center">
+                        <div>
+                            <h2 class="mb-2 heading-md">Healthcare Providers</h2>
+                            <p class="text-text-secondary">Showing <span id="results-count">24</span> providers in your area</p>
+                        </div>
+                        <div class="flex items-center mt-4 space-x-4 sm:mt-0">
+                            <!-- View Toggle -->
+                            <div class="flex p-1 bg-gray-100 rounded-lg">
+                                <button onclick="toggleView('list')" id="list-view-btn" class="px-3 py-2 text-sm font-medium text-white rounded-md bg-primary">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                                    </svg>
+                                </button>
+                                <button onclick="toggleView('map')" id="map-view-btn" class="px-3 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-primary">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M12 1.586l-4 4v12.828l4-4V1.586zM3.707 3.293A1 1 0 002 4v10a1 1 0 00.293.707L6 18.414V5.586L3.707 3.293zM17.707 5.293L14 1.586v12.828l2.293 2.293A1 1 0 0018 16V6a1 1 0 00-.293-.707z" clip-rule="evenodd"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <!-- Sort Dropdown -->
+                            <select class="w-auto form-input">
+                                <option value="distance">Sort by Distance</option>
+                                <option value="rating">Sort by Rating</option>
+                                <option value="name">Sort by Name</option>
+                                <option value="availability">Sort by Availability</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Provider Cards -->
+                    <div id="provider-list" class="space-y-6">
+                        <!-- Provider Card 1 -->
+                        <div class="card card-hover">
+                            <div class="flex flex-col gap-6 lg:flex-row">
+                                <!-- Provider Image -->
+                                <div class="flex-shrink-0 h-48 overflow-hidden rounded-lg lg:w-48 lg:h-32">
+                                    <img src="https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Kampala Medical Centre" class="object-cover w-full h-full" loading="lazy" />
+                                </div>
+
+                                <!-- Provider Info -->
+                                <div class="flex-1">
+                                    <div class="flex flex-col items-start justify-between mb-3 sm:flex-row">
+                                        <div>
+                                            <div class="flex items-center gap-2 mb-1">
+                                                <h3 class="heading-sm">Kampala Medical Centre</h3>
+                                                <span class="px-2 py-1 text-xs font-medium rounded-full bg-success-100 text-success-700">
+                                                    ✓ MedSave Verified
+                                                </span>
+                                            </div>
+                                            <p class="mb-2 text-sm text-text-secondary">General Hospital • Nakasero, Kampala</p>
+                                            <div class="flex items-center gap-4 text-sm text-text-secondary">
+                                                <span class="flex items-center">
+                                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                                    </svg>
+                                                    2.3 km away
+                                                </span>
+                                                <span class="flex items-center">
+                                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                                    </svg>
+                                                    Avg. wait: 15 mins
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2 text-right sm:mt-0">
+                                            <div class="flex items-center mb-1">
+                                                <div class="flex mr-1 text-accent">
+                                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                                </div>
+                                                <span class="text-sm font-medium">4.8</span>
+                                                <span class="ml-1 text-xs text-text-secondary">(124 reviews)</span>
+                                            </div>
+                                            <div class="flex items-center text-sm text-success">
+                                                <div class="w-2 h-2 mr-2 rounded-full bg-success"></div>
+                                                Available Now
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Services -->
+                                    <div class="mb-4">
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="px-2 py-1 text-xs rounded bg-primary-100 text-primary-700">General Medicine</span>
+                                            <span class="px-2 py-1 text-xs rounded bg-primary-100 text-primary-700">Emergency Care</span>
+                                            <span class="px-2 py-1 text-xs rounded bg-primary-100 text-primary-700">Surgery</span>
+                                            <span class="px-2 py-1 text-xs rounded bg-primary-100 text-primary-700">Laboratory</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Actions -->
+                                    <div class="flex flex-col gap-3 sm:flex-row">
+                                        <button onclick="bookAppointment('kampala-medical')" class="flex-1 btn-primary sm:flex-none">
+                                            Book Appointment
+                                        </button>
+                                        <button onclick="viewProvider('kampala-medical')" class="flex-1 btn-outline sm:flex-none">
+                                            View Details
+                                        </button>
+                                        <a href="tel:+256701234567" class="flex-1 text-center btn-outline sm:flex-none">
+                                            📞 Call Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Provider Card 2 -->
+                        <div class="card card-hover">
+                            <div class="flex flex-col gap-6 lg:flex-row">
+                                <!-- Provider Image -->
+                                <div class="flex-shrink-0 h-48 overflow-hidden rounded-lg lg:w-48 lg:h-32">
+                                    <img src="https://i.pinimg.com/1200x/75/28/f3/7528f33388b30c655af674dc3011490a.jpg" alt="Mulago Specialized Women's Hospital" class="object-cover w-full h-full" loading="lazy" />
+                                </div>
+
+                                <!-- Provider Info -->
+                                <div class="flex-1">
+                                    <div class="flex flex-col items-start justify-between mb-3 sm:flex-row">
+                                        <div>
+                                            <div class="flex items-center gap-2 mb-1">
+                                                <h3 class="heading-sm">Mulago Specialized Women's Hospital</h3>
+                                                <span class="px-2 py-1 text-xs font-medium rounded-full bg-success-100 text-success-700">
+                                                    ✓ MedSave Verified
+                                                </span>
+                                            </div>
+                                            <p class="mb-2 text-sm text-text-secondary">Specialized Hospital • Mulago Hill, Kampala</p>
+                                            <div class="flex items-center gap-4 text-sm text-text-secondary">
+                                                <span class="flex items-center">
+                                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                                    </svg>
+                                                    4.1 km away
+                                                </span>
+                                                <span class="flex items-center">
+                                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                                    </svg>
+                                                    Avg. wait: 25 mins
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2 text-right sm:mt-0">
+                                            <div class="flex items-center mb-1">
+                                                <div class="flex mr-1 text-accent">
+                                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                                </div>
+                                                <span class="text-sm font-medium">4.6</span>
+                                                <span class="ml-1 text-xs text-text-secondary">(89 reviews)</span>
+                                            </div>
+                                            <div class="flex items-center text-sm text-warning">
+                                                <div class="w-2 h-2 mr-2 rounded-full bg-warning"></div>
+                                                Busy - 25 min wait
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Services -->
+                                    <div class="mb-4">
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="px-2 py-1 text-xs rounded bg-primary-100 text-primary-700">Maternity Care</span>
+                                            <span class="px-2 py-1 text-xs rounded bg-primary-100 text-primary-700">Gynecology</span>
+                                            <span class="px-2 py-1 text-xs rounded bg-primary-100 text-primary-700">Pediatrics</span>
+                                            <span class="px-2 py-1 text-xs rounded bg-primary-100 text-primary-700">Family Planning</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Actions -->
+                                    <div class="flex flex-col gap-3 sm:flex-row">
+                                        <button onclick="bookAppointment('mulago-women')" class="flex-1 btn-primary sm:flex-none">
+                                            Book Appointment
+                                        </button>
+                                        <button onclick="viewProvider('mulago-women')" class="flex-1 btn-outline sm:flex-none">
+                                            View Details
+                                        </button>
+                                        <a href="tel:+256701234568" class="flex-1 text-center btn-outline sm:flex-none">
+                                            📞 Call Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Provider Card 3 - Emergency -->
+                        <div class="border-l-4 card card-hover border-error">
+                            <div class="flex flex-col gap-6 lg:flex-row">
+                                <!-- Provider Image -->
+                                <div class="flex-shrink-0 h-48 overflow-hidden rounded-lg lg:w-48 lg:h-32">
+                                    <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=800&q=80" alt="Case Hospital Emergency Center" class="object-cover w-full h-full" loading="lazy" />
+                                </div>
+
+                                <!-- Provider Info -->
+                                <div class="flex-1">
+                                    <div class="flex flex-col items-start justify-between mb-3 sm:flex-row">
+                                        <div>
+                                            <div class="flex items-center gap-2 mb-1">
+                                                <h3 class="heading-sm">Case Hospital Emergency Center</h3>
+                                                <span class="px-2 py-1 text-xs font-medium rounded-full bg-error-100 text-error-700">
+                                                    🚨 24/7 Emergency
+                                                </span>
+                                                <span class="px-2 py-1 text-xs font-medium rounded-full bg-success-100 text-success-700">
+                                                    ✓ MedSave Verified
+                                                </span>
+                                            </div>
+                                            <p class="mb-2 text-sm text-text-secondary">Emergency Hospital • Naguru, Kampala</p>
+                                            <div class="flex items-center gap-4 text-sm text-text-secondary">
+                                                <span class="flex items-center">
+                                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                                    </svg>
+                                                    3.7 km away
+                                                </span>
+                                                <span class="flex items-center">
+                                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                                    </svg>
+                                                    Emergency: Immediate
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2 text-right sm:mt-0">
+                                            <div class="flex items-center mb-1">
+                                                <div class="flex mr-1 text-accent">
+                                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                                </div>
+                                                <span class="text-sm font-medium">4.9</span>
+                                                <span class="ml-1 text-xs text-text-secondary">(156 reviews)</span>
+                                            </div>
+                                            <div class="flex items-center text-sm text-success">
+                                                <div class="w-2 h-2 mr-2 rounded-full bg-success"></div>
+                                                Open 24/7
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Services -->
+                                    <div class="mb-4">
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="px-2 py-1 text-xs rounded bg-error-100 text-error-700">Emergency Care</span>
+                                            <span class="px-2 py-1 text-xs rounded bg-primary-100 text-primary-700">Trauma Surgery</span>
+                                            <span class="px-2 py-1 text-xs rounded bg-primary-100 text-primary-700">ICU</span>
+                                            <span class="px-2 py-1 text-xs rounded bg-primary-100 text-primary-700">Ambulance</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Actions -->
+                                    <div class="flex flex-col gap-3 sm:flex-row">
+                                        <a href="tel:+256701234569" class="flex-1 px-6 py-3 font-semibold text-center text-white transition-all duration-300 rounded-lg bg-error sm:flex-none">
+                                            🚨 Emergency Call
+                                        </a>
+                                        <button onclick="viewProvider('case-emergency')" class="flex-1 btn-outline sm:flex-none">
+                                            View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map View (Hidden by default) -->
+                    <div id="map-view" class="hidden">
+                        <div class="p-6 bg-surface rounded-xl shadow-soft h-96">
+                            <div class="relative flex items-center justify-center h-full overflow-hidden bg-primary-50 rounded-xl">
+                                <!-- Interactive Map Placeholder -->
+                                <svg class="w-full h-full" viewBox="0 0 400 300" fill="none">
+                                    <!-- Map Background -->
+                                    <rect width="400" height="300" fill="#EBF4F8"/>
+                                    
+                                    <!-- Roads -->
+                                    <path d="M0 150 L400 150" stroke="#CBD5E0" stroke-width="3"/>
+                                    <path d="M200 0 L200 300" stroke="#CBD5E0" stroke-width="3"/>
+                                    <path d="M100 75 L300 225" stroke="#CBD5E0" stroke-width="2"/>
+                                    
+                                    <!-- Provider Markers -->
+                                    <circle cx="180" cy="120" r="8" fill="#2E86AB"/>
+                                    <circle cx="220" cy="180" r="8" fill="#2E86AB"/>
+                                    <circle cx="160" cy="200" r="8" fill="#E53E3E"/>
+                                    <circle cx="240" cy="100" r="8" fill="#2E86AB"/>
+                                    <circle cx="140" cy="160" r="8" fill="#2E86AB"/>
+                                    
+                                    <!-- User Location -->
+                                    <circle cx="200" cy="150" r="6" fill="#F18F01"/>
+                                    <circle cx="200" cy="150" r="12" fill="#F18F01" opacity="0.3"/>
+                                    
+                                    <!-- Labels -->
+                                    <text x="200" y="20" text-anchor="middle" class="text-sm font-semibold fill-current text-text-primary">Healthcare Providers Near You</text>
+                                    <text x="200" y="280" text-anchor="middle" class="text-xs fill-current text-text-secondary">🧭 Your Location</text>
+                                </svg>
+                                
+                                <!-- Map Controls -->
+                                <div class="absolute flex flex-col gap-2 top-4 right-4">
+                                    <button class="p-2 transition-shadow rounded-lg shadow-md bg-surface hover:shadow-lg">
+                                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                                        </svg>
+                                    </button>
+                                    <button class="p-2 transition-shadow rounded-lg shadow-md bg-surface hover:shadow-lg">
+                                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                
+                                <!-- Legend -->
+                                <div class="absolute p-3 rounded-lg shadow-md bottom-4 left-4 bg-surface">
+                                    <div class="space-y-2 text-xs">
+                                        <div class="flex items-center">
+                                            <div class="w-3 h-3 mr-2 rounded-full bg-primary"></div>
+                                            <span>General Providers</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <div class="w-3 h-3 mr-2 rounded-full bg-error"></div>
+                                            <span>Emergency Care</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <div class="w-3 h-3 mr-2 rounded-full bg-accent"></div>
+                                            <span>Your Location</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Load More -->
+                    <div class="mt-8 text-center">
+                        <button onclick="loadMoreProviders()" class="btn-outline">
+                            Load More Providers
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Banner -->
+    <section class="py-8 text-white bg-error">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center justify-between md:flex-row">
+                <div class="mb-4 text-center md:text-left md:mb-0">
+                    <h3 class="mb-2 text-xl font-bold">🚨 Medical Emergency?</h3>
+                    <p class="opacity-90">Get immediate help from our 24/7 emergency network</p>
+                </div>
+                <div class="flex flex-col gap-3 sm:flex-row">
+                    <a href="tel:911" class="px-6 py-3 font-semibold text-center transition-colors bg-white rounded-lg text-error hover:bg-gray-100">
+                        Call 911 Emergency
+                    </a>
+                    <a href="tel:+256701234569" class="px-6 py-3 font-semibold text-center text-white transition-colors border-2 border-white rounded-lg hover:bg-white hover:text-error">
+                        MedSave Emergency Line
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+   <!-- Footer -->
+<footer class="py-16 text-white bg-secondary-800">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="grid gap-8 md:grid-cols-4">
+            <!-- Company Info -->
+            <div>
+                <div class="flex items-center mb-4">
+                    <img src="https://i.pinimg.com/736x/79/54/af/7954af8fb2b20e502bca99f093686917.jpg" alt="MedSave Logo" class="object-cover w-8 h-8 rounded-full" />
+                    <span class="ml-2 text-xl font-bold">MedSave</span>
+                </div>
+                <p class="mb-4 text-gray-300">
+                    Transforming healthcare accessibility in Uganda through innovative financial technology.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-300 transition-colors hover:text-accent">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-300 transition-colors hover:text-accent">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="mb-4 font-semibold">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="how_it_works_educational_journey.html" class="text-gray-300 transition-colors hover:text-accent">How It Works</a></li>
+                    <li><a href="healthcare_network_directory_provider_discovery.html" class="text-gray-300 transition-colors hover:text-accent">Find Providers</a></li>
+                    <li><a href="success_stories_community_impact_showcase.html" class="text-gray-300 transition-colors hover:text-accent">Success Stories</a></li>
+                    <li><a href="personal_dashboard_account_management_hub.html" class="text-gray-300 transition-colors hover:text-accent">Dashboard</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div>
+                <h3 class="mb-4 font-semibold">Support</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-300 transition-colors hover:text-accent">Help Center</a></li>
+                    <li><a href="#" class="text-gray-300 transition-colors hover:text-accent">Contact Us</a></li>
+                    <li><a href="Privacy_Policy.html" target="_blank" class="text-gray-300 transition-colors hover:text-accent">Privacy Policy</a></li>
+                    <li><a href="#" class="text-gray-300 transition-colors hover:text-accent">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h3 class="mb-4 font-semibold">Contact</h3>
+                <ul class="space-y-2 text-gray-300">
+                    <li>📧 medsaveug@gmail.com</li>
+                    <li>📞 +256 781494757</li>
+                    <li>📍 Kampala, Uganda</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pt-8 mt-12 text-center text-gray-300 border-t border-gray-700">
+            <p>&copy; 2025 MedSave Healthcare Platform. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Search functionality
+        function searchProviders() {
+            const searchTerm = document.getElementById('search-input').value;
+            const location = document.getElementById('location-input').value;
+            
+            // Simulate search
+            console.log('Searching for:', searchTerm, 'in', location);
+            // In a real app, this would make an API call
+        }
+
+        // Quick search functionality
+        function quickSearch(category) {
+            document.getElementById('search-input').value = category + ' care';
+            searchProviders();
+        }
+
+        // View toggle functionality
+        function toggleView(viewType) {
+            const listView = document.getElementById('provider-list');
+            const mapView = document.getElementById('map-view');
+            const listBtn = document.getElementById('list-view-btn');
+            const mapBtn = document.getElementById('map-view-btn');
+
+            if (viewType === 'list') {
+                listView.classList.remove('hidden');
+                mapView.classList.add('hidden');
+                listBtn.classList.add('bg-primary', 'text-white');
+                listBtn.classList.remove('text-gray-600', 'hover:text-primary');
+                mapBtn.classList.remove('bg-primary', 'text-white');
+                mapBtn.classList.add('text-gray-600', 'hover:text-primary');
+            } else {
+                listView.classList.add('hidden');
+                mapView.classList.remove('hidden');
+                mapBtn.classList.add('bg-primary', 'text-white');
+                mapBtn.classList.remove('text-gray-600', 'hover:text-primary');
+                listBtn.classList.remove('bg-primary', 'text-white');
+                listBtn.classList.add('text-gray-600', 'hover:text-primary');
+            }
+        }
+
+        // Clear filters
+        function clearFilters() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const radios = document.querySelectorAll('input[type="radio"]');
+            const selects = document.querySelectorAll('select');
+            
+            checkboxes.forEach(cb => cb.checked = false);
+            radios.forEach(radio => radio.checked = false);
+            selects.forEach(select => select.selectedIndex = 0);
+        }
+
+        // Book appointment
+        function bookAppointment(providerId) {
+            alert('Booking appointment with provider: ' + providerId + '\nRedirecting to booking system...');
+            // In a real app, this would redirect to booking page
+        }
+
+        // View provider details
+        function viewProvider(providerId) {
+            alert('Viewing details for provider: ' + providerId);
+            // In a real app, this would show provider detail modal or page
+        }
+
+        // Load more providers
+        function loadMoreProviders() {
+            alert('Loading more providers...');
+            // In a real app, this would load additional provider cards
+        }
+
+        // Search on Enter key
+        document.getElementById('search-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchProviders();
+            }
+        });
+
+        document.getElementById('location-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchProviders();
+            }
+        });
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set default location if geolocation is available
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    // In a real app, you would reverse geocode the coordinates
+                    document.getElementById('location-input').placeholder = 'Current location detected';
+                });
+            }
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

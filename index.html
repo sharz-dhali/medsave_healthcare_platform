@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedSave Healthcare Platform</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+        }
+        
+        .redirect-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            max-width: 500px;
+            width: 90%;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .redirect-message {
+            font-size: 1rem;
+            margin-top: 20px;
+            opacity: 0.8;
+        }
+        
+        .manual-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .manual-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+    </style>
+    <script type="module" src="public/custom.js"></script>
+</head>
+<body>
+    <div class="redirect-container">
+        <div class="logo">MedSave</div>
+        <div class="subtitle">Healthcare Platform</div>
+        <div class="loading-spinner"></div>
+        <div class="redirect-message">Redirecting to homepage...</div>
+        <a href="pages/homepage_healthcare_fintech_platform.html" class="manual-link">
+            Continue to Homepage
+        </a>
+    </div>
+
+    <script>
+        // Redirect to the homepage after 3 seconds
+        setTimeout(function() {
+            window.location.href = 'pages/homepage_healthcare_fintech_platform.html';
+        }, 3000);
+        
+        // Optional: Add some interactive feedback
+        document.addEventListener('DOMContentLoaded', function() {
+            const redirectMessage = document.querySelector('.redirect-message');
+            let dots = 0;
+            
+            setInterval(function() {
+                dots = (dots + 1) % 4;
+                redirectMessage.textContent = 'Redirecting to homepage' + '.'.repeat(dots);
+                setTimeout(function() {
+    console.log('Redirecting to homepage...');
+    window.location.href = 'pages/homepage_healthcare_fintech_platform.html';
+}, 3000);
+            }, 500);
+        });
+    </script>
+<script id="dhws-dataInjector" src="public/dhws-data-injector.js"></script>
+</body>
+</html>
